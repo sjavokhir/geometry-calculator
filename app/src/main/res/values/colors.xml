@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <color name="colorDarkBlack">#000000</color>
     <color name="colorBlack">#1A1A1A</color>
+    <color name="colorBlue">#00ABE9</color>
+    <color name="colorDarkBlack">#000000</color>
     <color name="colorGray500">#9E9E9E</color>
+    <color name="colorGray600">#666666</color>
+    <color name="colorRed">#FF0000</color>
     <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorWarning">#E78960</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteTransparent50">#80FFFFFF</color>
+    <color name="colorGreen">#60E7A1</color>
 </resources>

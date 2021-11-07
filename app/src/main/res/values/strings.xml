@@ -1,9 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="app_name">GeometryCalculator</string>
-    <string name="image">Image</string>
+    <string name="app_name">Geometry &amp; Stereometry calculator</string>
+    <string name="area">Area</string>
+    <string name="calcul">Calcul</string>
     <string name="calculator">Calculator</string>
     <string name="geometry">Geometry</string>
-    <string name="calcul">Calcul</string>
-    <string name="option_3d">3D</string>
+    <string name="image">Image</string>
     <string name="option_2d">2D</string>
+    <string name="option_3d">3D</string>
+    <string name="per_area">Perimeter &amp; Area</string>
+    <string name="perimeter">Perimeter</string>
+    <string name="reset">Reset</string>
+    <string name="stereometry">Stereometry</string>
+    <string name="volume_calculator">Volume calculator</string>
+    <string name="rate_app">Rate app</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="other_apps">Other apps</string>
 </resources>

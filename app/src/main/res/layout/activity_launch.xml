@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlack"
-    tools:context=".ui.entry.LaunchActivity">
+    tools:context=".ui.LaunchActivity">
 
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="256dp"
         android:layout_height="256dp"
         android:layout_gravity="center"
+        android:background="@color/colorTransparent"
         android:contentDescription="@string/image"
         android:src="@drawable/ic_logo" />
 </FrameLayout>

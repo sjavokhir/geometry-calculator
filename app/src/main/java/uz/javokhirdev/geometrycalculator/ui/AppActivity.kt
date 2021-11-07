@@ -1,13 +1,15 @@
-package uz.javokhirdev.geometrycalculator.ui.entry
+package uz.javokhirdev.geometrycalculator.ui
 
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import uz.javokhirdev.geometrycalculator.R
 import uz.javokhirdev.geometrycalculator.databinding.ActivityAppBinding
-import uz.javokhirdev.geometrycalculator.helpers.hideKeyboard
+import uz.javokhirdev.geometrycalculator.helpers.*
 
 class AppActivity : AppCompatActivity() {
 
@@ -21,6 +23,7 @@ class AppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        configureDrawer()
         configureToolbar()
 
         with(binding) {
@@ -28,10 +31,11 @@ class AppActivity : AppCompatActivity() {
             title = null
 
             toolbar.setupWithNavController(navController)
-            toolbar.setNavigationIcon(R.drawable.ic_menu)
-            toolbar.setNavigationOnClickListener {
 
-            }
+            buttonClose.setOnClickListener { layoutDrawer.closeDrawer(GravityCompat.START) }
+            buttonApps.setOnClickListener { link(PLAY_STORE_DEV) }
+            buttonRateApp.setOnClickListener { link(PLAY_STORE) }
+            buttonShare.setOnClickListener { share() }
         }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -40,6 +44,24 @@ class AppActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.homeFragment -> onMenu()
                 else -> onBack()
+            }
+        }
+    }
+
+    private fun configureDrawer() {
+        with(binding) {
+            val actionBarDrawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
+                this@AppActivity, layoutDrawer, R.string.open, R.string.close
+            ) {
+                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                    super.onDrawerSlide(drawerView, slideOffset)
+                    layoutContent.translationX = drawerView.width * slideOffset
+                }
+            }
+
+            layoutDrawer.apply {
+                drawerElevation = 0f
+                addDrawerListener(actionBarDrawerToggle)
             }
         }
     }
@@ -53,12 +75,17 @@ class AppActivity : AppCompatActivity() {
         }
     }
 
+    fun setToolbarTitle(title: String, subtitle: String) {
+        with(binding) {
+            toolbar.title = title
+            toolbar.subtitle = subtitle
+        }
+    }
+
     private fun onMenu() {
-        with(binding.toolbar) {
-            setNavigationIcon(R.drawable.ic_menu)
-            setNavigationOnClickListener {
-                Toast.makeText(this@AppActivity, "On menu clicked", Toast.LENGTH_SHORT).show()
-            }
+        with(binding) {
+            toolbar.setNavigationIcon(R.drawable.ic_menu)
+            toolbar.setNavigationOnClickListener { layoutDrawer.openDrawer(GravityCompat.START) }
         }
     }
 

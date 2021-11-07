@@ -17,10 +17,10 @@
         tools:ignore="AllowBackup"
         tools:targetApi="n">
         <activity
-            android:name=".ui.entry.AppActivity"
+            android:name=".ui.AppActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.entry.LaunchActivity"
+            android:name=".ui.LaunchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,11 +1,11 @@
-package uz.javokhirdev.geometrycalculator.ui.home
+package uz.javokhirdev.geometrycalculator.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import uz.javokhirdev.geometrycalculator.data.ShapeResponse
+import uz.javokhirdev.geometrycalculator.helpers.ShapeResponse
 import uz.javokhirdev.geometrycalculator.databinding.ItemShapeBinding
 
 class HomeAdapter(private val listener: HomeListener) :

@@ -1,7 +1,6 @@
 buildscript {
     ext {
         kotlinVersion = "1.5.31"
-        lifecycleVersion = "2.4.0"
         navVersion = "2.4.0-beta02"
         glideVersion = "4.12.0"
     }

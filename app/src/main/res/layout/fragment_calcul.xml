@@ -3,11 +3,245 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.calcul.CalculFragment">
+    android:background="@color/colorBlack"
+    tools:context=".ui.CalculFragment">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageShape"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_margin="32dp"
+                android:layout_marginBottom="24dp"
+                android:adjustViewBounds="true"
+                android:background="@color/colorTransparent"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_trapezoid" />
+
+            <LinearLayout
+                android:id="@+id/layoutOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textOne"
+                    style="@style/TextBase"
+                    android:fontFamily="@font/medium"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputOne"
+                    style="@style/TextBase"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorTransparent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:fontFamily="@font/medium"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:scrollHorizontally="true"
+                    android:textSize="32sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_dash" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textTwo"
+                    style="@style/TextBase"
+                    android:fontFamily="@font/medium"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTwo"
+                    style="@style/TextBase"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorTransparent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:fontFamily="@font/medium"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:scrollHorizontally="true"
+                    android:textSize="32sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_dash" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textThree"
+                    style="@style/TextBase"
+                    android:fontFamily="@font/medium"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputThree"
+                    style="@style/TextBase"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorTransparent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:fontFamily="@font/medium"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:scrollHorizontally="true"
+                    android:textSize="32sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_dash" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPerArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layoutPerimeter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPerimeter"
+                        style="@style/TextBase"
+                        android:fontFamily="@font/medium"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textPerimeterValue"
+                        style="@style/TextBase"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/medium"
+                        android:textSize="32sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_dash" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textArea"
+                        style="@style/TextBase"
+                        android:fontFamily="@font/medium"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textAreaValue"
+                        style="@style/TextBase"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/medium"
+                        android:textSize="32sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_dash" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textVolume"
+                    style="@style/TextBase"
+                    android:fontFamily="@font/medium"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textVolumeValue"
+                    style="@style/TextBase"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/medium"
+                    android:textSize="32sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_dash" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

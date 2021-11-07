@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="uz.javokhirdev.geometrycalculator.ui.home.HomeFragment"
+        android:name="uz.javokhirdev.geometrycalculator.ui.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
         <action
@@ -21,7 +21,11 @@
 
     <fragment
         android:id="@+id/calculFragment"
-        android:name="uz.javokhirdev.geometrycalculator.ui.calcul.CalculFragment"
+        android:name="uz.javokhirdev.geometrycalculator.ui.CalculFragment"
         android:label=""
-        tools:layout="@layout/fragment_calcul" />
+        tools:layout="@layout/fragment_calcul">
+        <argument
+            android:name="shapeId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

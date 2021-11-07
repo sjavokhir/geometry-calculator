@@ -6,9 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlack"
-    tools:context=".ui.entry.AppActivity">
+    tools:context=".ui.AppActivity">
 
     <LinearLayout
+        android:id="@+id/layoutContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBlack"
@@ -46,5 +47,106 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/app_graph" />
     </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/buttonClose"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end"
+                android:background="@color/colorTransparent"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_close" />
+
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@color/colorTransparent"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_logo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonApps"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/medium"
+                android:gravity="start|center_vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/other_apps"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorBlack"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_other_apps"
+                app:iconGravity="start"
+                app:iconPadding="20dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/colorWhite"
+                app:rippleColor="@color/colorWhiteTransparent50" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRateApp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:gravity="start|center_vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/rate_app"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorBlack"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_star"
+                app:iconGravity="start"
+                app:iconPadding="20dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/colorWhite"
+                app:rippleColor="@color/colorWhiteTransparent50" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonShare"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:gravity="start|center_vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/share_with_friends"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorBlack"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_share"
+                app:iconGravity="start"
+                app:iconPadding="20dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/colorWhite"
+                app:rippleColor="@color/colorWhiteTransparent50" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

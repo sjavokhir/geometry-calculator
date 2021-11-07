@@ -1,4 +1,4 @@
-package uz.javokhirdev.geometrycalculator.ui.entry
+package uz.javokhirdev.geometrycalculator.ui
 
 import android.os.Bundle
 import android.view.animation.AnimationUtils
