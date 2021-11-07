@@ -58,6 +58,8 @@
         <entry key="app/src/main/res/layout/item_shape.xml" value="0.31535087719298244" />
         <entry key="app/src/main/res/menu/menu_home.xml" value="0.31535087719298244" />
         <entry key="app/src/main/res/menu/menu_reset.xml" value="0.3890625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3472222222222222" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3472222222222222" />
       </map>
     </option>
   </component>
