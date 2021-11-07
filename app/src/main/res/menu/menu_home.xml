@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/optionView"
+        android:icon="@drawable/ic_2d"
+        android:title="@string/option_2d"
+        app:showAsAction="ifRoom" />
+</menu>

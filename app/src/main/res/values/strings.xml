@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeometryCalculator</string>
+    <string name="image">Image</string>
+    <string name="calculator">Calculator</string>
+    <string name="geometry">Geometry</string>
+    <string name="calcul">Calcul</string>
+    <string name="option_3d">3D</string>
+    <string name="option_2d">2D</string>
+</resources>

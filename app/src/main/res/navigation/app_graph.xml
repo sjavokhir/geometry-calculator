@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.javokhirdev.geometrycalculator.ui.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeToCalcul"
+            app:destination="@id/calculFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:exitAnim="@anim/slide_exit"
+            app:popEnterAnim="@anim/slide_pop_enter"
+            app:popExitAnim="@anim/slide_pop_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calculFragment"
+        android:name="uz.javokhirdev.geometrycalculator.ui.calcul.CalculFragment"
+        android:label=""
+        tools:layout="@layout/fragment_calcul" />
+</navigation>
